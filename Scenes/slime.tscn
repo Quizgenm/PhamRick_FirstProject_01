@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://j32acyqkyna2"]
 
-[ext_resource type="Script" uid="uid://dxt3hetof0nff" path="res://Scripts/slime.gd" id="1_aiwxb"]
-[ext_resource type="Texture2D" uid="uid://c1atgliwdx6ht" path="res://Assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_swwnm"]
-[ext_resource type="PackedScene" uid="uid://mu7icok1wprl" path="res://Scenes/killzone.tscn" id="2_aiwxb"]
+[ext_resource type="Script" uid="uid://dxt3hetof0nff" path="res://scripts/enemy.gd" id="1_aiwxb"]
+[ext_resource type="Texture2D" uid="uid://c1atgliwdx6ht" path="res://assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_swwnm"]
+[ext_resource type="PackedScene" uid="uid://mu7icok1wprl" path="res://scenes/killzone.tscn" id="2_aiwxb"]
+[ext_resource type="Script" uid="uid://y4a3rmxs8g5w" path="res://scripts/stomped.gd" id="4_pjw23"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_paq7w"]
 atlas = ExtResource("1_swwnm")
@@ -41,7 +42,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4o34"]
-size = Vector2(12, 14)
+size = Vector2(14, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aiwxb"]
+size = Vector2(10, 3)
 
 [node name="Slime" type="Node2D" unique_id=1846172989]
 script = ExtResource("1_aiwxb")
@@ -50,16 +54,22 @@ script = ExtResource("1_aiwxb")
 sprite_frames = SubResource("SpriteFrames_e388w")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.5187066
+frame_progress = 0.1341366
 
 [node name="Killzone" parent="." unique_id=1780234911 instance=ExtResource("2_aiwxb")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=35453653]
-position = Vector2(0, 5)
+position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_r4o34")
 
-[node name="RayCast right" type="RayCast2D" parent="." unique_id=2082605106]
+[node name="rightarrow" type="RayCast2D" parent="." unique_id=2082605106]
 target_position = Vector2(16, 0)
 
-[node name="RayCast left" type="RayCast2D" parent="." unique_id=1910315388]
+[node name="leftarrow" type="RayCast2D" parent="." unique_id=1910315388]
 target_position = Vector2(-15, 0)
+
+[node name="goombastomp" parent="." unique_id=1347382054 instance=ExtResource("2_aiwxb")]
+script = ExtResource("4_pjw23")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goombastomp" unique_id=1263875702]
+shape = SubResource("RectangleShape2D_aiwxb")

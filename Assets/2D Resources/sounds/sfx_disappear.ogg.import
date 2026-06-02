@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://u8e8lfhijiwh"
-path="res://.godot/imported/sfx_disappear.ogg-7e52e84d056b6ee6718fb9a41b24149a.oggvorbisstr"
+path="res://.godot/imported/sfx_disappear.ogg-dbc7b668fabd28e4b3f4d0861d199f44.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/2D Resources/sounds/sfx_disappear.ogg"
-dest_files=["res://.godot/imported/sfx_disappear.ogg-7e52e84d056b6ee6718fb9a41b24149a.oggvorbisstr"]
+source_file="res://assets/2D Resources/sounds/sfx_disappear.ogg"
+dest_files=["res://.godot/imported/sfx_disappear.ogg-dbc7b668fabd28e4b3f4d0861d199f44.oggvorbisstr"]
 
 [params]
 

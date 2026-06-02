@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://blm71ulsr6jie"]
+
+[ext_resource type="Script" uid="uid://dxt3hetof0nff" path="res://scripts/enemy.gd" id="1_sawtf"]
+[ext_resource type="Texture2D" uid="uid://baxwkjrxrarp7" path="res://assets/2D Resources/characters/DinoSprites - vita.png" id="2_pcjg6"]
+[ext_resource type="PackedScene" uid="uid://mu7icok1wprl" path="res://scenes/killzone.tscn" id="3_k0asn"]
+[ext_resource type="Script" uid="uid://dd4j40djfwrpr" path="res://scripts/stompinf.gd" id="4_p1mqd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_df5af"]
+atlas = ExtResource("2_pcjg6")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_318xo"]
+atlas = ExtResource("2_pcjg6")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxb28"]
+atlas = ExtResource("2_pcjg6")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6trq"]
+atlas = ExtResource("2_pcjg6")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45ogi"]
+atlas = ExtResource("2_pcjg6")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mka65"]
+atlas = ExtResource("2_pcjg6")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mxb28"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_df5af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_318xo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxb28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6trq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45ogi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mka65")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e240t"]
+size = Vector2(12, 6)
+
+[node name="dino" type="Node2D" unique_id=1462061128]
+script = ExtResource("1_sawtf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1479062234]
+sprite_frames = SubResource("SpriteFrames_mxb28")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.51911783
+
+[node name="stomp" parent="." unique_id=639315052 instance=ExtResource("3_k0asn")]
+script = ExtResource("4_p1mqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stomp" unique_id=1684237889]
+position = Vector2(1, -4)
+shape = SubResource("RectangleShape2D_e240t")
+
+[node name="rightarrow" type="RayCast2D" parent="." unique_id=2125903330]
+target_position = Vector2(16, 0)
+
+[node name="leftarrow" type="RayCast2D" parent="." unique_id=618972244]
+target_position = Vector2(-16, -1)

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d17m4nmts5ayn"]
 
-[ext_resource type="Texture2D" uid="uid://csc5qtwpbtfv7" path="res://Assets/brackeys_platformer_assets/sprites/coin.png" id="1_2qo34"]
-[ext_resource type="Script" uid="uid://cnhmemwvi6rm5" path="res://Scripts/coin.gd" id="1_jgi06"]
-[ext_resource type="AudioStream" uid="uid://cob4refmw7ln2" path="res://Assets/brackeys_platformer_assets/sounds/coin.wav" id="3_g537i"]
+[ext_resource type="Texture2D" uid="uid://csc5qtwpbtfv7" path="res://assets/brackeys_platformer_assets/sprites/coin.png" id="1_2qo34"]
+[ext_resource type="Script" uid="uid://cnhmemwvi6rm5" path="res://scripts/coin.gd" id="1_jgi06"]
+[ext_resource type="AudioStream" uid="uid://cob4refmw7ln2" path="res://assets/brackeys_platformer_assets/sounds/coin.wav" id="3_g537i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgi06"]
 atlas = ExtResource("1_2qo34")
@@ -143,7 +143,7 @@ resource_name = "pickup"
 length = 0.43333334
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("AnimationPlayer:active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -199,12 +199,14 @@ _data = {
 }
 
 [node name="Coin" type="Area2D" unique_id=1187165858]
+collision_layer = 15
 collision_mask = 2
 script = ExtResource("1_jgi06")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=296864657]
 sprite_frames = SubResource("SpriteFrames_qtgto")
-frame_progress = 0.053604063
+autoplay = "default"
+frame_progress = 0.24364053
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1976155469]
 shape = SubResource("CircleShape2D_m55n1")

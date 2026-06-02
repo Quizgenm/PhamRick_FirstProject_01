@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://blrokimloeybm"]
+
+[ext_resource type="Script" uid="uid://dk4xsahff2haj" path="res://scripts/levelmanager.gd" id="1_s3esy"]
+[ext_resource type="PackedScene" uid="uid://b7y8w5ur2mf2w" path="res://scenes/game.tscn" id="2_d2op2"]
+
+[node name="MainGame" type="Node2D" unique_id=349145212]
+
+[node name="levelmanager" type="Node2D" parent="." unique_id=1479019962]
+visible = false
+script = ExtResource("1_s3esy")
+level_array = Array[PackedScene]([ExtResource("2_d2op2"), ExtResource("2_d2op2"), ExtResource("2_d2op2")])

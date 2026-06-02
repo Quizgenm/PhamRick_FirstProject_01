@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpjn0krgidbt0"
-path="res://.godot/imported/DinoSprites - mort.png-9ba0eea1a815ec0ae498dcd4445acd05.ctex"
+path="res://.godot/imported/DinoSprites - mort.png-edb02a0268dc79f45e2a860e39f6a723.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/2D Resources/characters/DinoSprites - mort.png"
-dest_files=["res://.godot/imported/DinoSprites - mort.png-9ba0eea1a815ec0ae498dcd4445acd05.ctex"]
+source_file="res://assets/2D Resources/characters/DinoSprites - mort.png"
+dest_files=["res://.godot/imported/DinoSprites - mort.png-edb02a0268dc79f45e2a860e39f6a723.ctex"]
 
 [params]
 
