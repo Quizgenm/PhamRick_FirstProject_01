@@ -63,10 +63,10 @@ position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_r4o34")
 
 [node name="rightarrow" type="RayCast2D" parent="." unique_id=2082605106]
-target_position = Vector2(16, 0)
+target_position = Vector2(11, 0)
 
 [node name="leftarrow" type="RayCast2D" parent="." unique_id=1910315388]
-target_position = Vector2(-15, 0)
+target_position = Vector2(-11, 0)
 
 [node name="goombastomp" parent="." unique_id=1347382054 instance=ExtResource("2_aiwxb")]
 script = ExtResource("4_pjw23")

@@ -75,6 +75,7 @@ func dash(direction: float):
 func on_get_fruit() -> void:
 	can_dash = true
 	
-	
-	# dash fruit not working like coin, also add dash thing
+func die():
+	print("death upon yee")
+	jump(01.4)
 	

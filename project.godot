@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Intro to game engines"
-run/main_scene="uid://b7y8w5ur2mf2w"
+run/main_scene="uid://blrokimloeybm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

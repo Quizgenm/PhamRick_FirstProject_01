@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://blrokimloeybm"]
 
+[ext_resource type="PackedScene" uid="uid://cwu66v32oelty" path="res://scenes/startmenu.tscn" id="1_ipu61"]
 [ext_resource type="Script" uid="uid://dk4xsahff2haj" path="res://scripts/levelmanager.gd" id="1_s3esy"]
 [ext_resource type="PackedScene" uid="uid://b7y8w5ur2mf2w" path="res://scenes/game.tscn" id="2_d2op2"]
+[ext_resource type="PackedScene" uid="uid://bp4xa7kmd1i1e" path="res://scenes/transition_level.tscn" id="3_0rdsr"]
+[ext_resource type="PackedScene" path="res://scenes/level_2.tscn" id="4_ipu61"]
 
 [node name="MainGame" type="Node2D" unique_id=349145212]
 
+[node name="startmenu" parent="." unique_id=267675612 instance=ExtResource("1_ipu61")]
+
 [node name="levelmanager" type="Node2D" parent="." unique_id=1479019962]
-visible = false
+unique_name_in_owner = true
 script = ExtResource("1_s3esy")
-level_array = Array[PackedScene]([ExtResource("2_d2op2"), ExtResource("2_d2op2"), ExtResource("2_d2op2")])
+level_array = Array[PackedScene]([ExtResource("2_d2op2"), ExtResource("3_0rdsr"), ExtResource("4_ipu61")])

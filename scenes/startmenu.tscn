@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cwu66v32oelty"]
+
+[ext_resource type="Script" uid="uid://bjumcg3ye5y4f" path="res://scripts/startmenu.gd" id="1_t0y3k"]
+[ext_resource type="FontFile" uid="uid://bd1j3s32o676k" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="1_u4tt2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0y3k"]
+bg_color = Color(0.50752854, 0.59300685, 0.8219576, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_ids67"]
+base_font = ExtResource("1_u4tt2")
+
+[sub_resource type="FontVariation" id="FontVariation_poymh"]
+base_font = ExtResource("1_u4tt2")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cy0qo"]
+bg_color = Color(0.06647098, 0.67409337, 0.7575862, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0y3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ids67"]
+
+[node name="startmenu" type="CanvasLayer" unique_id=1511988700]
+script = ExtResource("1_t0y3k")
+
+[node name="Panel" type="Panel" parent="." unique_id=969646369]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t0y3k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=955791744]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -36.0
+offset_right = 138.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1499965527]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_ids67")
+text = "A simple little game"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1257306046]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_poymh")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_cy0qo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t0y3k")
+text = "Start"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=465832318]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_poymh")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_cy0qo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ids67")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]

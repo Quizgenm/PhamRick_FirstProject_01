@@ -1,19 +1,15 @@
 [gd_scene format=3 uid="uid://l3lw3byqhmtq"]
 
 [ext_resource type="Script" uid="uid://bm648iu50gu0l" path="res://scripts/flag.gd" id="1_32e5v"]
-[ext_resource type="Texture2D" uid="uid://bts2wadpj2ara" path="res://icon.svg" id="2_q38m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkyk4"]
-size = Vector2(82, 22)
+size = Vector2(86, 22)
 
 [node name="flag" type="Area2D" unique_id=1049039558]
 script = ExtResource("1_32e5v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=84997172]
-position = Vector2(2, 0)
+position = Vector2(17, 0)
 shape = SubResource("RectangleShape2D_jkyk4")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=221365892]
-position = Vector2(-0.39996582, 0.26001763)
-scale = Vector2(0.19374946, 0.17593777)
-texture = ExtResource("2_q38m2")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

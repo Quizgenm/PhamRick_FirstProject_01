@@ -7,9 +7,7 @@ var current_level : Node2D
 
 static var instance : levelmanager 
 
-func _ready() -> void:
-	instance = self
-	next_level()
+
 
 func next_level():
 	if current_level:

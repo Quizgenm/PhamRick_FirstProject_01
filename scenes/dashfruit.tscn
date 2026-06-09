@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://77aie1ilnnp2" path="res://scripts/dashfruit.gd" id="1_rwio3"]
 [ext_resource type="Texture2D" uid="uid://dbn270uwepqjb" path="res://assets/brackeys_platformer_assets/sprites/fruit.png" id="2_18m0a"]
+[ext_resource type="AudioStream" uid="uid://cuu1x3mlkrf43" path="res://assets/brackeys_platformer_assets/sounds/power_up.wav" id="3_f84wd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6v8ms"]
 atlas = ExtResource("2_18m0a")
@@ -58,5 +59,10 @@ frame_progress = 0.6118168
 top_level = true
 visibility_layer = 7
 shape = SubResource("CircleShape2D_avibb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1929617759]
+stream = ExtResource("3_f84wd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1001116290]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
